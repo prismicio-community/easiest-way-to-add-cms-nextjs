@@ -48,5 +48,6 @@ limitations under the License.
 
 [prismic]: https://prismic.io/
 [prismic-docs]: https://prismic.io/docs/
+[prismic-sign-up]: https://prismic.io/dashboard/signup
 [nextjs]: https://nextjs.org/
 [guide]: https://prismic.io/blog/easiest-way-add-cms-nextjs
