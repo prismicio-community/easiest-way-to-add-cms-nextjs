@@ -1,8 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import { PrismicText, PrismicRichText } from "@prismicio/react";
+import { createClient } from "../prismicio";
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export default function Home({ page }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -13,13 +15,12 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          <PrismicText field={page.data.greeting} />
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <div className={styles.description}>
+          <PrismicRichText field={page.data.description} />
+        </div>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -58,12 +59,25 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
+}
+
+export async function getStaticProps() {
+  // Client used to fetch CMS content.
+  const client = createClient();
+
+  // Page document for our homepage from the CMS.
+  const page = await client.getByUID("page", "home");
+
+  // Pass the homepage as prop to our page.
+  return {
+    props: { page },
+  };
 }

@@ -1,0 +1,29 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "page",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "greeting": [
+      {
+        "type": "paragraph",
+        "text": "Dolor amet amet ad enim sint. Culpa labore ea excepteur.",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Consectetur incididunt mollit ut et et sunt deserunt et quis duis ipsum mollit. Voluptate duis excepteur sit irure est excepteur duis velit est reprehenderit. Enim sint adipisicing qui nisi occaecat quis laborum veniam duis adipisicing non eu amet.",
+        "spans": []
+      }
+    ]
+  }
+}
