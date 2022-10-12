@@ -9,8 +9,8 @@ To learn yourself, follow the guide on Prismic's blog here: [**The Easiest Way t
 If you want to skip [the guide][guide] and see the finished app, run the following commands:
 
 ```sh
-npx degit prismicio-community/nextjs-starter-prismic-blog your-project-name
-cd your-project-name
+npx degit prismicio-community/easiest-way-to-add-cms-nextjs easiest-way-to-add-cms-nextjs
+cd easiest-way-to-add-cms-nextjs
 npx @slicemachine/init
 ```
 
